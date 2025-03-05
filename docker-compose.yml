@@ -1,0 +1,15 @@
+
+services:
+  wordpress:
+    container_name: w-wordpress
+    image: wordpress:latest
+    ports:
+      - "8000:80"
+    environment:
+      WORDPRESS_DB_HOST: 192.168.1.101
+      WORDPRESS_DB_USER: root
+      WORDPRESS_DB_PASSWORD: parsa1384
+      WORDPRESS_DB_NAME: wordpress
+    volumes:
+      - D:/MyWorks/SIteProject/PelaskoNavaii/wordpress_data:/var/www/html
+    restart: always
